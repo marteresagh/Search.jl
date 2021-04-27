@@ -2,11 +2,11 @@
 	model2graph_edge2edge(V::Lar.Points,EV::Lar.Cells)::LightGraphs.SimpleGraphs.SimpleGraph{Int64}
 """
 function model2graph_edge2edge(V::Points,EV::Cells)::LightGraphs.SimpleGraphs.SimpleGraph{Int64}
-    M1 = Geometry.characteristicMatrix(EV)
+    M1 = Common.characteristicMatrix(EV)
 	EE = (M1*M1').%2
-	R, C, VAL = Geometry.findnz(EE)
+	R, C, VAL = Common.findnz(EE)
 	graph = SimpleGraph(length(EV))
-	for i in 1:Geometry.nnz(EE)
+	for i in 1:Common.nnz(EE)
 		add_edge!(graph,R[i],C[i])
 	end
 	return graph

@@ -1,12 +1,12 @@
 module Search
-    using Geometry
-    import Geometry.Points, Geometry.Cells
+    using Common
+    import Common.Points, Common.Cells
     using NearestNeighbors
     using LightGraphs
 
     include("Search/neighbors.jl")
     include("Search/graph.jl")
 
-    export NearestNeighbors, Geometry, LightGraphs
+    export NearestNeighbors, Common, LightGraphs
 
 end # module
