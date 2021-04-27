@@ -4,7 +4,7 @@ authors = ["marteresagh <marteresa28@gmail.com>"]
 version = "0.1.0"
 
 [deps]
-Geometry = "a6da75dc-ee3f-471b-9b83-a57479b9787d"
+Common = "1e120bc2-2bd2-483a-9663-793997b3971f"
 LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
 NearestNeighbors = "b8a86587-4115-5ab1-83bc-aa920d37bbce"
 
