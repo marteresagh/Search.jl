@@ -23,7 +23,7 @@
                          1.1 0.2 0.1 0.1 ;
                          0.0 5.1 2.1 0.0  ]
 
-        seeds = Search.consistent_seeds(Geometry.PointCloud(points)).([c[:] for c in eachcol(given_seeds)])
+        seeds = Search.consistent_seeds(Search.PointCloud(points)).([c[:] for c in eachcol(given_seeds)])
 
         @test seeds == [1,2,3,4]
     end
