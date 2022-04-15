@@ -32,12 +32,11 @@ end
 
 
 """
-	neighborhood(	kdtree::NNTree{V},
-	 					points::Points,
-		 				seeds::Array{Int64,1},
-						visitedverts::Array{Int64,1},
-						threshold::Float64,
-						k=10::Int64
+n_inrange(	balltree::NNTree{V},
+					points::Points,
+					seeds::Array{Int64,1},
+					visitedverts::Array{Int64,1},
+					threshold::Float64
 					 ) where V <: AbstractVector
 
 Return the neighborhood of seed points, removing all points already visited and too distant.
@@ -50,7 +49,7 @@ function n_inrange(	balltree::NNTree{V},
 					 ) where V <: AbstractVector
 
 
-	
+
 	N = Search.inrange(balltree, points[:,seeds], threshold, true) # usare un parametro abbastanza grande
 
 	return setdiff(union(N...),visitedverts)
